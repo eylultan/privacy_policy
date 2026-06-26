@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoGenAI Impact Panel — Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      color: #1f2937;
+      background: #f9fafb;
+    }
+    h1 { font-size: 24px; color: #047857; margin-bottom: 4px; }
+    h2 { font-size: 18px; margin-top: 28px; color: #1f2937; }
+    .date { font-size: 13px; color: #6b7280; margin-bottom: 24px; }
+    p, li { font-size: 15px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a { color: #059669; }
+    .highlight {
+      background: #ecfdf5;
+      border: 1px solid #d1fae5;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-weight: 600;
+      color: #065f46;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Privacy Policy</h1>
+  <p class="date">EcoGenAI Impact Panel &mdash; Last updated: June 2026</p>
+
+  <div class="highlight">
+    EcoGenAI runs entirely in your browser. No data is collected, transmitted, or stored on any external server.
+  </div>
+
+  <h2>What the Extension Does</h2>
+  <p>EcoGenAI Impact Panel estimates the environmental impact (carbon emissions, energy use, and water consumption) of your ChatGPT conversations. It reads prompts and responses from the ChatGPT page to calculate token counts and then applies published research models to estimate impact.</p>
+
+  <h2>Data Processing</h2>
+  <p>All estimation calculations happen <strong>locally in your browser</strong> using JavaScript. Specifically:</p>
+  <ul>
+    <li>Prompt and response text is read from the ChatGPT page DOM to count tokens.</li>
+    <li>Token counts are used with built-in energy models to estimate carbon, energy, and water impact.</li>
+    <li>The detected ChatGPT model name and your timezone-based region are used to select appropriate estimation coefficients.</li>
+  </ul>
+
+  <h2>Data Collection</h2>
+  <p>EcoGenAI does <strong>not</strong> collect, store, or transmit any personal data. Specifically:</p>
+  <ul>
+    <li>No prompt text or response text is sent to any server.</li>
+    <li>No browsing history, cookies, or personal information is accessed.</li>
+    <li>No analytics, telemetry, or tracking of any kind is used.</li>
+    <li>No accounts or sign-ups are required.</li>
+  </ul>
+
+  <h2>Local Storage</h2>
+  <p>The extension uses <code>chrome.storage.sync</code> to persist user preferences (such as the selected location mode). This data stays within your browser's Chrome extension storage and is not accessible to any external service.</p>
+  <p>Session impact data (per-prompt estimates and session totals) is held in memory only and is cleared when you refresh or close the ChatGPT page.</p>
+
+  <h2>Permissions Explained</h2>
+  <ul>
+    <li><strong>storage</strong> &mdash; Used to save your preferences (location mode, region selection) between sessions.</li>
+    <li><strong>Host permissions for chatgpt.com and chat.openai.com</strong> &mdash; Required so the content script can inject the side panel into the ChatGPT page and read prompt/response text for token counting.</li>
+  </ul>
+
+  <h2>Third-Party Services</h2>
+  <p>EcoGenAI does not use any third-party services, APIs, or analytics platforms. All code runs locally in your browser.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>If this privacy policy changes, the updated version will be included with the extension update and published on this page.</p>
+
+  <h2>Contact</h2>
+  <p>If you have questions about this privacy policy, please open an issue on the project's GitHub repository.</p>
+
+</body>
+</html>
